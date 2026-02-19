@@ -1,4 +1,4 @@
-﻿/* Copyright 2020 Adam Honse <calcprogrammer1@gmail.com>
+/* Copyright 2020 Adam Honse <calcprogrammer1@gmail.com>
  * Copyright 2020 Dimitris Mantzouranis <d3xter93@gmail.com>
  * Copyright 2022 Pablo Ramirez <jp.ramangulo@gmail.com>
  *
@@ -21,8 +21,8 @@
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x3434
 
-#define MANUFACTURER    Keychron
-#define PRODUCT         K3 RGB
+#define MANUFACTURER    "Keychron"
+#define PRODUCT         "K3 RGB"
 
 /* key matrix size */
 #define MATRIX_ROWS 6
