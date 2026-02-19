@@ -15,5 +15,5 @@ fi
 cp -rp "$subdir" qmk_firmware/keyboards/keychron/k6/keymaps
 
 (cd qmk_firmware &&
-  make -j4 keychron/k6/rgb/ansi:ansi-josh COLOR=false &&
+  make -j4 keychron/k6/rgb/ansi:ansi-josh COLOR=true &&
   mv keychron_k3_rgb_optical_iso_iso_seyahdoo.bin ../build/"keychron_k3_rgb_optical_iso_iso_seyahdoo-$TAG.bin")
