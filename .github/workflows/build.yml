@@ -21,6 +21,11 @@ jobs:
         run: cp -rp keyboards/keychron/k3/rgb/config.h qmk_firmware/keyboards/keychron/k3/rgb/config.h
       - name: Compile firmware
         run: cd qmk_firmware && make keychron/k3/rgb/optical_iso:iso_seyahdoo
+      - name: Locate firmware for upload
+        run: |
+          BIN=$(find qmk_firmware -name 'keychron_k3*.bin' -type f 2>/dev/null | head -1)
+          if [ -z "$BIN" ]; then echo "No .bin found"; find qmk_firmware -name '*.bin' -type f 2>/dev/null; exit 1; fi
+          cp "$BIN" qmk_firmware/keychron_k3_rgb_optical_iso_iso_seyahdoo.bin
       - name: Upload compiled firmware (build artifact)
         uses: actions/upload-artifact@v4
         with:
